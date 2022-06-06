@@ -21,9 +21,15 @@ public class AttendeeController {
     private final AttendeeRepo attendeeRepo;
     private final AttendanceRepo attendanceRepo;
 
+
     @PostMapping("/addNewAttendee")
     public Attendee addNewAttendee(@RequestBody Attendee attendee){
         return attendeeRepo.save(attendee);
+    }
+
+    @GetMapping("/home")
+    public String home(){
+        return "Welcome!";
     }
 
     @GetMapping("/getAllAttendees")
