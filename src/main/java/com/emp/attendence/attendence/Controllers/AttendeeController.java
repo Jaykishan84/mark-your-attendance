@@ -27,11 +27,6 @@ public class AttendeeController {
         return attendeeRepo.save(attendee);
     }
 
-    @GetMapping("/home")
-    public String home(){
-        return "Welcome!";
-    }
-
     @GetMapping("/getAllAttendees")
     public Iterable<Attendee> getAllAttendees(){
         return attendeeRepo.findAll();
